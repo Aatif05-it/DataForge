@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataforge"
+version = "0.1.0"
+description = "Generate realistic synthetic datasets with a simple and powerful API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Khan Aatif", email = "mohdaatif9820@gmail.com" }
+]
+
+keywords = [
+    "data",
+    "dataset",
+    "synthetic-data",
+    "fake-data",
+    "generator",
+    "csv",
+    "json",
+    "excel",
+    "sqlite",
+    "testing"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "pandas>=2.2.0",
+    "Faker>=37.0.0",
+    "openpyxl>=3.1.2"
+]
+
+# ===============================
+# CLI Command
+# ===============================
+[project.scripts]
+dataforge = "dataforge.cli:main"
+
+# ===============================
+# Project Links
+# ===============================
+[project.urls]
+Homepage = "https://github.com/yourusername/DataForge"
+Documentation = "https://github.com/yourusername/DataForge/wiki"
+Repository = "https://github.com/yourusername/DataForge"
+Issues = "https://github.com/yourusername/DataForge/issues"
+
+# ===============================
+# setuptools
+# ===============================
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dataforge*"]

@@ -1,0 +1,191 @@
+Metadata-Version: 2.4
+Name: dataforge
+Version: 0.1.0
+Summary: Generate realistic synthetic datasets with a simple and powerful API.
+Home-page: https://github.com/yourusername/DataForge
+Author: Khan Aatif
+Author-email: Your Name <your@email.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/DataForge
+Project-URL: Documentation, https://github.com/yourusername/DataForge/wiki
+Project-URL: Repository, https://github.com/yourusername/DataForge
+Project-URL: Issues, https://github.com/yourusername/DataForge/issues
+Keywords: data,dataset,synthetic-data,fake-data,generator,csv,json,excel,sqlite,testing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: Faker>=37.0.0
+Requires-Dist: openpyxl>=3.1.2
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# DataForge
+
+> Generate realistic synthetic datasets with a simple and powerful API.
+
+DataForge is a modern Python library for generating realistic fake datasets for testing,
+machine learning, software development, education, and demonstrations.
+
+---
+
+## Features
+
+- Generate thousands of records in seconds
+- Simple and intuitive API
+- Export to CSV
+- Export to JSON
+- Export to Excel (.xlsx)
+- Export to SQLite
+- Custom schemas
+- Built on top of Pandas
+- Cross-platform
+
+---
+
+## Installation
+
+```bash
+pip install dataforge
+```
+
+Or install locally
+
+```bash
+git clone https://github.com/yourusername/DataForge.git
+
+cd DataForge
+
+pip install -e .
+```
+
+---
+
+## Quick Start
+
+```python
+from dataforge import forge
+
+df = forge(
+    rows=100,
+    schema={
+        "name": "name",
+        "email": "email",
+        "phone": "phone",
+        "salary": "salary"
+    }
+)
+
+print(df.head())
+```
+
+---
+
+## Example Output
+
+| Name | Email | Phone | Salary |
+|------|-------|--------|---------|
+| John Smith | john@example.com | +1 555-1234 | 65000 |
+| Alice Brown | alice@test.com | +1 555-5678 | 72000 |
+
+---
+
+## Export CSV
+
+```python
+from dataforge import forge
+
+df = forge(
+    rows=500,
+    schema={
+        "name":"name",
+        "email":"email"
+    }
+)
+
+df.to_csv("users.csv", index=False)
+```
+
+---
+
+## Export Excel
+
+```python
+df.to_excel("users.xlsx", index=False)
+```
+
+---
+
+## Export JSON
+
+```python
+df.to_json("users.json")
+```
+
+---
+
+## Roadmap
+
+- CSV Export
+- JSON Export
+- Excel Export
+- SQLite Export
+- YAML Schema
+- REST API
+- CLI Tool
+- AI Dataset Generator
+- PostgreSQL Export
+- MongoDB Export
+
+---
+
+## Project Structure
+
+```
+DataForge/
+│
+├── dataforge/
+├── examples/
+├── tests/
+├── docs/
+├── README.md
+├── setup.py
+└── pyproject.toml
+```
+
+---
+
+## Requirements
+
+- Python 3.10+
+- Pandas
+- Faker
+- OpenPyXL
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Author
+
+Khan Aatif
+
+---
+
+## Contributing
+
+Pull requests are welcome.
+
+If you find bugs or have feature requests, please open an issue.

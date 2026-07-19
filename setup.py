@@ -1,0 +1,42 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="dataforge",
+    version="0.1.0",
+    author="Khan Aatif",
+    author_email="mohdaatif9820@gmail.com",
+    description="Generate realistic synthetic datasets with a simple API.",
+    long_description=open("README.md", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/yourusername/DataForge",
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=[
+        "pandas>=2.2.0",
+        "Faker>=37.0.0",
+        "openpyxl>=3.1.2",
+    ],
+    python_requires=">=3.10",
+    license="MIT",
+    keywords=[
+        "data",
+        "dataset",
+        "generator",
+        "synthetic-data",
+        "faker",
+        "csv",
+        "json",
+        "excel",
+        "sqlite",
+    ],
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Topic :: Software Development :: Libraries",
+    ],
+)

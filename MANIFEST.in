@@ -1,0 +1,35 @@
+# Include documentation
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+
+# Include package metadata
+recursive-include dataforge *.py
+
+# Include examples
+recursive-include examples *.py
+
+# Include tests
+recursive-include tests *.py
+
+# Include documentation
+recursive-include docs *
+
+# Exclude unwanted files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.log
+global-exclude *.tmp
+global-exclude *.bak
+
+# Exclude virtual environments
+prune venv
+prune .venv
+prune env
+
+# Exclude Git files
+prune .git
+exclude .gitignore
