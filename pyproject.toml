@@ -52,10 +52,10 @@ dataforge = "dataforge.cli:main"
 # Project Links
 # ===============================
 [project.urls]
-Homepage = "https://github.com/yourusername/DataForge"
-Documentation = "https://github.com/yourusername/DataForge/wiki"
-Repository = "https://github.com/yourusername/DataForge"
-Issues = "https://github.com/yourusername/DataForge/issues"
+Homepage = "https://github.com/Aatif05-it/DataForge"
+Documentation = "https://github.com/Aatif05-it/DataForge/wiki"
+Repository = "https://github.com/Aatif05-it/DataForge"
+Issues = "https://github.com/Aatif05-it/DataForge/issues"
 
 # ===============================
 # setuptools
